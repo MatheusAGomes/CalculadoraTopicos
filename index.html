@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" charset="utf-8" src="calc.js"></script>
+    <title>Calculadora</title>
+    <style>
+        #estruturadacalculadora{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: lightblue;
+            width: 275px;
+            height: 315px;
+            border-radius: 10px 10px 10px 10px;
+            padding-top: 1.5%;
+
+        }
+        #tecladoNumerico
+        {
+            margin-top: 10px;
+        }
+        .button{
+            height: 50px;
+            width: 50px;
+            background-color: white;
+            margin-top: 1px;
+            margin-bottom: 1px;
+        }
+        input{
+            box-shadow: 0 0 0 0;
+            border: 0 none;
+            outline: 0;
+            height: 25px;
+            width:100%;
+            
+        }
+    </style>
+</head>
+<body >
+    <form name="calc">
+    <div id="estruturadacalculadora">
+        <div style="margin-top:1px">
+            <input type="text" disabled name="tab" value="0" style="border-radius: 5px;">
+        </div>
+        <div id="tecladoNumerico">
+            <div>
+                <input class="button" type="button" value="ac" onclick="onClickFunction(value)"/>
+                <input class="button" type="button" value="<-" onclick="onClickFunction(value)"/>
+                <input class="button" id="/" type="button" value="/" onclick="onClickFunction(value)"/>
+               
+            </div>
+            <div>
+                <input class="button" type="button" value="7" onclick="onClickNumber(value)"/>
+                <input class="button" type="button" value="8" onclick="onClickNumber(value)"/>
+                <input class="button" type="button" value="9" onclick="onClickNumber(value)"/>
+                <input class="button" id="x" type="button" value="x" onclick="onClickFunction(value)"/>
+
+            </div>
+            <div>
+                <input class="button" type="button" value="4" onclick="onClickNumber(value)"/>
+                <input class="button" type="button" value="5" onclick="onClickNumber(value)"/>
+                <input class="button" type="button" value="6" onclick="onClickNumber(value)"/>
+                <input class="button" id="-" type="button" value="-" onclick="onClickFunction(value)"/>
+            </div>
+            
+            <div>
+                
+
+
+                <input class="button" type="button" value="1" onclick="onClickNumber(value)"/>
+                <input class="button" type="button" value="2" onclick="onClickNumber(value)"/>
+                <input class="button" type="button" value="3" onclick="onClickNumber(value)"/>
+                <input class="button" id="+" type="button" value="+" onclick="onClickFunction(value)"/>
+
+            </div>
+            <input class="button" type="button" value="+/-" onclick="onClickFunction(value)"/>
+            <input class="button" type="button" value="0" onclick="onClickNumber(value)"/>
+            <input class="button" type="button" value="." onclick="onClickFunction(value)"/>
+            <input class="button" type="button" value="=" onclick="onClickFunction(value)" style="background-color: lightgray;">
+
+            
+
+
+        </div>
+    </div>
+</form>
+</body>
+</html>
